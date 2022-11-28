@@ -4,15 +4,31 @@ import java.util.Scanner;
 
 public class Loops {
     public static void main(String[] args) {
-        int k;
-        Scanner inp = new Scanner(System.in);
+        int number, count = 0, total = 0;
 
-        System.out.println("Sayı giriniz : ");
-        k = inp.nextInt();
-        for(int i=1;i<=k;i++){
-            if(i%2==0){
-                System.out.println(i);
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Sayı giriniz : ");
+        number = input.nextInt();
+
+        for (int i = 0; i <= number; i++) {
+            if (i % 3 == 0 && i % 4 == 0 && i != 0) {
+                count++;
+                total += i;
             }
+        }
+
+        writeToResultByCondition(number, count, total);
+    }
+
+    private static void writeToResultByCondition(int number, int count, int total) {
+        double average;
+
+        if (count == 0) {
+            System.out.println("1-" + number + " arasında  3 ve 4 e ortak bölünebilen sayı bulunamadı.");
+        } else {
+            average = total / count;
+            System.out.println("Ortak Bölünebilen sayı adeti : " + count + "\nBölünebilen sayıların ortalaması : " + average);
         }
     }
     }
