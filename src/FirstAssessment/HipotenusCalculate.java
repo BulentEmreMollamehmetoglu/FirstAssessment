@@ -17,5 +17,7 @@ public class HipotenusCalculate {
         areaOfTriangle = Math.sqrt(perimeter * (perimeter-a)* (perimeter-b)* (perimeter-hypotenuse));
         System.out.println("Hypotenuse is : " + hypotenuse);
         System.out.println("Area of triangle is : " + areaOfTriangle);
+
     }
+
 }
