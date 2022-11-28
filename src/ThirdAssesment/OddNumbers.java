@@ -2,19 +2,18 @@ package ThirdAssesment;
 
 import java.util.Scanner;
 
-public class UntilOddNumber {
+public class OddNumbers {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int number = 0;
+        int n;
         int total = 0;
-
-        while(number%2 ==0) {
-            System.out.print("Enter a number (greater than 0) : ");
-            number = input.nextInt();
-            if(number % 4 == 0) {
-                total += number;
-                System.out.println("Total " + total);
+        Scanner inp = new Scanner(System.in);
+        do{
+            System.out.println("Sayı giriniz : ");
+            n = inp.nextInt();
+            if(n%2 == 1){
+                total += n;
             }
-        }
+        }while(n>0);
+        System.out.println("Toplam : "+total);
     }
-    }
+}

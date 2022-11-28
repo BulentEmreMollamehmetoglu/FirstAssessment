@@ -1,8 +1,8 @@
-package randomPack;
+package ThirdAssesment;
 
 import java.util.Scanner;
 
-public class Main {
+public class ExponentialNumber {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int result = 1;
@@ -19,5 +19,4 @@ public class Main {
 
         System.out.println(number + " ^ " + exponentNumber +" = " + result);
     }
-
 }
